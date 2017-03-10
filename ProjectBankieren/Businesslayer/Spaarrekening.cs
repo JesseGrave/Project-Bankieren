@@ -6,20 +6,44 @@ using System.Threading.Tasks;
 
 namespace Businesslayer 
 {
-    public class Spaarrekening /*: Rekening*/
+    public class Spaarrekening : Rekening
     {
-        private decimal rentePercentage;
+        // PROPERTIES
+        private decimal Rentepercentage;
 
-        public decimal RentePercentage
+        public decimal HuidigeRenteBerekenen
         {
-            get { return rentePercentage; }
-            set { rentePercentage = value; }
+            get { return (bankSaldo * (Rentepercentage / 100)); }
+        }
+        
+        // CONSTRUCTOR
+        public Spaarrekening(string _rekeningnr, decimal _banksaldo, decimal _rente) : base(_rekeningnr, _banksaldo)
+        {
+            this.Rentepercentage = _rente;
         }
 
-        //public decimal HuidigeRenteBerekenen
-        //{
-        //    set { bankSaldo * Convert.ToDecimal(0.01); }
-        //}
+        // Methodes
+        public void AfSchrijven(decimal bedrag)
+        {
+            try
+            {
+                bankSaldo -= bedrag;
+                if (base.bankSaldo <= 0)
+                {
+                    Bijschrijven = bedrag;
+                    throw new ArgumentException("Uw transactie is mislukt /n Reden: Uw banksaldo kan niet in het negatief komen te staan.");
+                }
+            }
+            catch (Exception exception)
+            {
+                throw exception;
+            }
+        }
 
+        public override string ToString()
+        {
+            return base.ToString() +
+                string.Format("RentePercentage: {0}\nHuidig Opgebouwede Rente: {1}", Rentepercentage, HuidigeRenteBerekenen);
+        }
     }
 }
