@@ -41,9 +41,9 @@ namespace Businesslayer
             set { achternaam = value; }
         }
 
-        private int bsn;
+        private long bsn;
 
-        public int BSN
+        public long BSN
         {
             get { return bsn; }
             set { bsn = value; }
@@ -51,7 +51,7 @@ namespace Businesslayer
 
         // CONSTRUCTOR
 
-        public Persoon(string _gebruikersnaam, string _wachtwoord, string _voornaam, string _achternaam, int _bsn)
+        public Persoon(string _gebruikersnaam, string _wachtwoord, string _voornaam, string _achternaam, long _bsn)
         {
             this.gebruikersnaam = _gebruikersnaam;
             this.wachtwoord = _wachtwoord;

@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Bankrekeninghouder.cs" />
     <Compile Include="Betaalrekening.cs" />
+    <Compile Include="DataProvider.cs" />
     <Compile Include="Persoon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rekening.cs" />
