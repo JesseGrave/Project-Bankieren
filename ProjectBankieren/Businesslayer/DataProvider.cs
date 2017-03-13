@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Businesslayer
 {
-    static class DataProvider
+    public static class DataProvider
     {
         public static List<Bankrekeninghouder> Allebankrekeninghouders()
         {
@@ -14,18 +14,47 @@ namespace Businesslayer
 
             Allebankrekeninghouders.Add(new Bankrekeninghouder
                 (
-                Voornaam: "Menno",
-                Achternaam: "de Lange",
-                BSN: "147258369",
-                Gebruikersnaam: "mdeLange",
-                Wachtwoord: "MennoBank",
-                RekeningNrSparen: "1593572",
+                voornaam: "Menno",
+                achternaam: "de Lange",
+                bsn: 147258369,
+                gebruikersnaam: "mdeLange",
+                wachtwoord: "MennoBank",
+                rekeningnrSparen: "1593572",
                 spaarSaldo: 1000,
-                Renteprecentage: 1,
-                RekeningNrBetalen: "183272",
-                BetaalSaldo: "100",
-                maxKrediet: "1500"
+                rentepercentage: 1,
+                rekeningnrBetalen: "183272",
+                BetaalSaldo: 100,
+                maxkrediet: 1500
                 ));
+
+            return Allebankrekeninghouders;
+        }
+
+        public static Bankrekeninghouder Inloggen(string _gebruikersnaam, string _wachtwoord)
+        {
+            var list = Allebankrekeninghouders();
+
+            foreach (var item in list)
+            {
+                if (_gebruikersnaam == item.Gebruikersnaam())
+                {
+                    if (_wachtwoord == item.Wachtwoord())
+                    {
+                        return item;
+                    }
+                    else
+                    {
+                        throw new ArgumentException("Uw wachtwoord is onjuist");
+                        return null;
+                    }
+                }
+                else
+                {
+                    throw new ArgumentException("Uw gebruikersnaam is onjuist");
+                    return null;
+                }
+            }
+            return null;
         }
     }
 }
