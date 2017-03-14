@@ -29,16 +29,26 @@ namespace ProjectBankieren
 
         private void btnInloggen_Click(object sender, RoutedEventArgs e)
         {
-            try
+            if (rbGebruiker.IsChecked == true)
             {
-                DataProvider.Inloggen(tbGebruikersNaam.Text, tbWachtwoord.Password);
-                Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
-                objPersoonsgegevens.Show();
-                this.Close();
-            }
-            catch (Exception exc)
+                try
+                {
+                    DataProvider.Inloggen(tbGebruikersNaam.Text, tbWachtwoord.Password);
+
+                    Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
+                    objPersoonsgegevens.Show();
+                    this.Close();
+                }
+                catch (Exception exc)
+                {
+                    MessageBox.Show(exc.Message);
+                }
+            } else if(rbWerknemer.IsChecked == true)
             {
-                MessageBox.Show(exc.Message);
+                // Door sturen naar de werknemer.
+            } else
+            {
+                // Exception throwen : "Kies een optie uit Gebruiker of Werknemer"
             }
         }
     }

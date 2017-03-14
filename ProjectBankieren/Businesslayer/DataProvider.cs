@@ -81,17 +81,17 @@ namespace Businesslayer
                         return item;
                         gebruikersnaam = true;
                         wachtwoord = true;
+
+                        Bankrekeninghouder huidigeGebruiker = item;
                     }
                     else
                     {
                         wachtwoord = false;
-                        //throw new ArgumentException("Uw wachtwoord is onjuist");
                     }
                 }
                 else
                 {
                     gebruikersnaam = false;
-                    //throw new ArgumentException("Uw gebruikersnaam is onjuist");
                 }
 
             }
@@ -110,16 +110,3 @@ namespace Businesslayer
         }
     }
 }
-
-                //Voornaam: "",
-                //Achternaam: "",
-                //BSN: "",
-                //Gebruikersnaam: "",
-                //Wachtwoord: "",
-                //RekeningNrSparen: "",
-                //spaarSaldo: ,
-                //Renteprecentage: ,
-                //RekeningNrBetalen: "",
-                //BetaalSaldo: "",
-                //maxKrediet: ""
-                //));

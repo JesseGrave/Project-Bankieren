@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using Businesslayer;
+
 namespace ProjectBankieren
 {
     /// <summary>
@@ -22,6 +24,20 @@ namespace ProjectBankieren
         public Persoonsgegevens()
         {
             InitializeComponent();
+        }
+
+        private void btnSpaarrekening_Click(object sender, RoutedEventArgs e)
+        {
+            //Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
+            //objPersoonsgegevens.Show();
+            //this.Close();
+        }
+
+        private void btnBetaalRekening_Click(object sender, RoutedEventArgs e)
+        {
+            //Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
+            //objPersoonsgegevens.Show();
+            //this.Close();
         }
     }
 }
