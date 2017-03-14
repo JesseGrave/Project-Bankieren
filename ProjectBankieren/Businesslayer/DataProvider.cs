@@ -69,6 +69,8 @@ namespace Businesslayer
         public static Bankrekeninghouder Inloggen(string _gebruikersnaam, string _wachtwoord)
         {
             var list = Allebankrekeninghouders();
+            bool gebruikersnaam = true;
+            bool wachtwoord = true;
 
             foreach (var item in list)
             {
@@ -77,19 +79,33 @@ namespace Businesslayer
                     if (_wachtwoord == item.Wachtwoord())
                     {
                         return item;
+                        gebruikersnaam = true;
+                        wachtwoord = true;
                     }
                     else
                     {
-                        throw new ArgumentException("Uw wachtwoord is onjuist");
-                        return null;
+                        wachtwoord = false;
+                        //throw new ArgumentException("Uw wachtwoord is onjuist");
                     }
                 }
                 else
                 {
-                    throw new ArgumentException("Uw gebruikersnaam is onjuist");
-                    return null;
+                    gebruikersnaam = false;
+                    //throw new ArgumentException("Uw gebruikersnaam is onjuist");
                 }
+
             }
+
+            if (!gebruikersnaam)
+            {
+                throw new ArgumentException("Uw gebruikersnaam is onjuist");
+            }
+
+            if (!wachtwoord)
+            {
+                throw new ArgumentException("Uw wachtwoord is onjuist");
+            }
+
             return null;
         }
     }
