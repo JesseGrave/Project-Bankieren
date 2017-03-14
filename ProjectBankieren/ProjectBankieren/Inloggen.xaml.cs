@@ -29,7 +29,17 @@ namespace ProjectBankieren
 
         private void btnInloggen_Click(object sender, RoutedEventArgs e)
         {
-            DataProvider.Inloggen(tbGebruikersNaam.Text, tbWachtwoord.Text);
+            try
+            {
+                DataProvider.Inloggen(tbGebruikersNaam.Text, tbWachtwoord.Password);
+                Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
+                objPersoonsgegevens.Show();
+                this.Close();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
     }
 }
