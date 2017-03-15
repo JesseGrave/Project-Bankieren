@@ -10,7 +10,7 @@ namespace Businesslayer
         {
 
             //PROPERTIES
-            private Persoon rekeninghouder;
+            public Persoon rekeninghouder;
 
             private Betaalrekening betaalrekening;
 
@@ -46,5 +46,4 @@ namespace Businesslayer
             }
 
            }
-
-        }
+ }

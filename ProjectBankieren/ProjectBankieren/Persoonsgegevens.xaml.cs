@@ -21,9 +21,15 @@ namespace ProjectBankieren
     /// </summary>
     public partial class Persoonsgegevens : Window
     {
-        public Persoonsgegevens()
+        private Bankrekeninghouder bankrekeninghouder;
+        public Persoonsgegevens(Bankrekeninghouder _bankrekeninghouder)
         {
             InitializeComponent();
+
+            this.bankrekeninghouder = _bankrekeninghouder;
+            lblNaam.Content = bankrekeninghouder.rekeninghouder.Voornaam + ' ' + bankrekeninghouder.rekeninghouder.Achternaam;
+            lblBSN.Content = bankrekeninghouder.rekeninghouder.BSN;
+            
         }
 
         private void btnSpaarrekening_Click(object sender, RoutedEventArgs e)

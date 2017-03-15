@@ -22,7 +22,8 @@ namespace ProjectBankieren
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+       
+        public MainWindow( )
         {
             InitializeComponent();
         }
@@ -33,9 +34,10 @@ namespace ProjectBankieren
             {
                 try
                 {
-                    DataProvider.Inloggen(tbGebruikersNaam.Text, tbWachtwoord.Password);
+                    Bankrekeninghouder hudigeGebruiker = DataProvider.Inloggen(tbGebruikersNaam.Text, tbWachtwoord.Password);
 
-                    Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
+                    
+                    Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens(hudigeGebruiker);
                     objPersoonsgegevens.Show();
                     this.Close();
                 }

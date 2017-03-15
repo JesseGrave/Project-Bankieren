@@ -7,9 +7,12 @@
         mc:Ignorable="d"
         Title="Persoonsgegevens" Height="300" Width="300">
     <Grid>
-        <Label x:Name="lblNaam" Content="" HorizontalAlignment="Left" Margin="33,27,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblBSN" Content="" HorizontalAlignment="Left" Margin="33,58,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblNaam" Content="" HorizontalAlignment="Left" Margin="117,5,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBSN" Content="" HorizontalAlignment="Left" Margin="117,36,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnSpaarrekening" Content="Spaar rekening" HorizontalAlignment="Left" Margin="189,202,0,0" VerticalAlignment="Top" Width="85" Click="btnSpaarrekening_Click"/>
         <Button x:Name="btnBetaalRekening" Content="Betaal rekening" HorizontalAlignment="Left" Margin="189,226,0,0" VerticalAlignment="Top" Width="85" Click="btnBetaalRekening_Click"/>
+        <Label x:Name="lblNaamGebruiker" Content="Uw naam:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBSNGebruiker" Content="Uw BSN nummer:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>

@@ -83,10 +83,6 @@ namespace Businesslayer
                     if (_wachtwoord == item.Wachtwoord())
                     {
                         return item;
-                        gebruikersnaam = true;
-                        wachtwoord = true;
-
-                        Bankrekeninghouder huidigeGebruiker = item;
                     }
                     else
                     {
