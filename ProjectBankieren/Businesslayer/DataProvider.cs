@@ -8,6 +8,8 @@ namespace Businesslayer
 {
     public static class DataProvider
     {
+
+        //CONSTRUCTOR
         public static List<Bankrekeninghouder> Allebankrekeninghouders()
         {
             List<Bankrekeninghouder> Allebankrekeninghouders = new List<Bankrekeninghouder>();
@@ -66,6 +68,8 @@ namespace Businesslayer
             return Allebankrekeninghouders;
         }
 
+
+        //METHODES
         public static Bankrekeninghouder Inloggen(string _gebruikersnaam, string _wachtwoord)
         {
             var list = Allebankrekeninghouders();

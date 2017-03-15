@@ -8,6 +8,8 @@ namespace Businesslayer
 {
     public abstract class Rekening
     {
+
+        //PROPERTIES
         protected string rekeningNr;
 
         protected decimal bankSaldo;
@@ -17,12 +19,14 @@ namespace Businesslayer
             set { value += bankSaldo; }
         }
 
+        //CONSTRUCTOR
         public Rekening(string _rekeningNr, decimal _bankSaldo)
         {
             this.rekeningNr = _rekeningNr;
             this.bankSaldo = _bankSaldo;
         }
 
+        //METHODES
         public override string ToString()
         {
             return string.Format("RekeningNr: {0} \n Banksaldo: {1}", this.rekeningNr, this.bankSaldo);

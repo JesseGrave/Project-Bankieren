@@ -8,19 +8,16 @@ namespace Businesslayer
 {
         public class Bankrekeninghouder
         {
+
+            //PROPERTIES
             private Persoon rekeninghouder;
 
             private Betaalrekening betaalrekening;
 
             private Spaarrekening spaarrekening;
 
-            //public Bankrekeninghouder( Persoon _rekeninghouder, Bankrekening _bankrekening, SpaarRekening _spaarrekening)
-            //{
-            //    this.rekeninghouder = _rekeninghouder;
-            //    this.bankrekening = _bankrekening;
-            //    this.spaarrekening = _spaarrekening;
-            //}
 
+            //CONSTRUCTOR
             public Bankrekeninghouder(string voornaam, string achternaam, long bsn, string gebruikersnaam, string wachtwoord,
                 string rekeningnrSparen, decimal spaarSaldo, decimal rentepercentage, string rekeningnrBetalen, decimal BetaalSaldo, decimal maxkrediet)
             {
@@ -28,7 +25,8 @@ namespace Businesslayer
                 spaarrekening = new Spaarrekening(rekeningnrSparen, spaarSaldo, rentepercentage);
                 betaalrekening = new Betaalrekening(rekeningnrBetalen, BetaalSaldo, maxkrediet);
             }
-
+            
+            //METHODES
             public string Gebruikersnaam()
             {
                 return rekeninghouder.Gebruikersnaam;
@@ -46,44 +44,6 @@ namespace Businesslayer
             {
                 return betaalrekening.ToString();
             }
-
-            //public bool BetalingVerrichten(string rekeningnr, decimal bedrag)
-            //{
-            //    return true;
-            //}
-
-            //public bool OverboekenNaarSpaarRekening(decimal bedrag)
-            //{
-            //    try
-            //    {
-            //        betaalrekening.AfSchrijven(bedrag);
-            //        //spaarrekening.Bijschrijven(bedrag);
-            //        return true;
-            //    }
-
-            //    catch (Exception exception)
-            //    {
-            //        throw exception;
-            //        return false;
-            //    }
-            //}
-
-            //public bool OverboekenNaarBetaalRekening(decimal bedrag)
-            //{
-            //    try
-            //    {
-            //        spaarrekening.AfSchrijven(bedrag);
-            //        //betaalrekening.Bijschrijven(bedrag);
-            //        return true;
-            //    }
-
-            //    catch (Exception exception)
-            //    {
-            //        throw exception;
-            //        return false;
-            //    }
-
-            //}
 
            }
 

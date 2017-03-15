@@ -22,7 +22,7 @@ namespace Businesslayer
             this.Rentepercentage = _rente;
         }
 
-        // Methodes
+        // METHODES
         public void AfSchrijven(decimal bedrag)
         {
             try
