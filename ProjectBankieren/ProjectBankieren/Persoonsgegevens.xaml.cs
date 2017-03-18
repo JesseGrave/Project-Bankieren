@@ -27,9 +27,15 @@ namespace ProjectBankieren
             InitializeComponent();
 
             this.bankrekeninghouder = _bankrekeninghouder;
+
             lblNaam.Content = bankrekeninghouder.rekeninghouder.Voornaam + ' ' + bankrekeninghouder.rekeninghouder.Achternaam;
             lblBSN.Content = bankrekeninghouder.rekeninghouder.BSN;
-            
+            //lblBetaalRekeningSaldo
+            //lblSpaarRekeningSaldo
+            //lblBetaalRekening
+            //lblSpaarRekening
+
+
         }
 
         private void btnSpaarrekening_Click(object sender, RoutedEventArgs e)
@@ -44,6 +50,13 @@ namespace ProjectBankieren
             //Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
             //objPersoonsgegevens.Show();
             //this.Close();
+        }
+
+        private void btnUitloggen_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow objInloggen = new MainWindow();
+            objInloggen.Show();
+            this.Close();
         }
     }
 }

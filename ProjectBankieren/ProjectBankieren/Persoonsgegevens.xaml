@@ -9,10 +9,14 @@
     <Grid>
         <Label x:Name="lblNaam" Content="" HorizontalAlignment="Left" Margin="117,5,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblBSN" Content="" HorizontalAlignment="Left" Margin="117,36,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSpaarrekening" Content="Spaar rekening" HorizontalAlignment="Left" Margin="189,202,0,0" VerticalAlignment="Top" Width="85" Click="btnSpaarrekening_Click"/>
-        <Button x:Name="btnBetaalRekening" Content="Betaal rekening" HorizontalAlignment="Left" Margin="189,226,0,0" VerticalAlignment="Top" Width="85" Click="btnBetaalRekening_Click"/>
+        <Button x:Name="btnSpaarrekening" Content="Spaar rekening" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="85" Click="btnSpaarrekening_Click"/>
+        <Button x:Name="btnBetaalRekening" Content="Betaal rekening" HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top" Width="85" Click="btnBetaalRekening_Click"/>
         <Label x:Name="lblNaamGebruiker" Content="Uw naam:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblBSNGebruiker" Content="Uw BSN nummer:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
-
+        <Label x:Name="lblSpaarRekening" Content="Uw spaar rekening:" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBetaalRekening" Content="Uw betaal rekening:" HorizontalAlignment="Left" Margin="10,114,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblBetaalRekeningSaldo" Content="Saldo betaal rekening:" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnUitloggen" Content="Uitloggen" HorizontalAlignment="Left" Margin="209,241,0,0" VerticalAlignment="Top" Width="75" Click="btnUitloggen_Click"/>
+        <Label x:Name="lblSpaarRekeningSaldo" Content="Saldo spaar rekening:" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

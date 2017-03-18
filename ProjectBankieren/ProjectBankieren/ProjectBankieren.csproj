@@ -55,6 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SpaarRekening.xaml.cs">
+      <DependentUpon>SpaarRekening.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BetaalRekeningxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Inloggen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -63,11 +70,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BetaalRekeningxaml.xaml.cs">
+      <DependentUpon>BetaalRekeningxaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Inloggen.xaml.cs">
       <DependentUpon>Inloggen.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Persoonsgegevens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpaarRekening.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

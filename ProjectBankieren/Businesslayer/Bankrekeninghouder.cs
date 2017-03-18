@@ -12,9 +12,9 @@ namespace Businesslayer
             //PROPERTIES
             public Persoon rekeninghouder;
 
-            private Betaalrekening betaalrekening;
+            public Betaalrekening betaalrekening;
 
-            private Spaarrekening spaarrekening;
+            public Spaarrekening spaarrekening;
 
 
             //CONSTRUCTOR

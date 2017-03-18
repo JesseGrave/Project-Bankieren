@@ -36,7 +36,6 @@ namespace ProjectBankieren
                 {
                     Bankrekeninghouder hudigeGebruiker = DataProvider.Inloggen(tbGebruikersNaam.Text, tbWachtwoord.Password);
 
-                    
                     Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens(hudigeGebruiker);
                     objPersoonsgegevens.Show();
                     this.Close();
