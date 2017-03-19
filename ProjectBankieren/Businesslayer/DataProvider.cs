@@ -103,5 +103,31 @@ namespace Businesslayer
 
             return null;
         }
+
+        public static bool ElfProef(string _bsn)
+        {
+            if (_bsn.Length != 9)
+            {
+                return false;
+            }
+
+            int i = 9;
+            int total = 0;
+
+            for (int j = 0; j < 8; j++)
+            {
+                char t = _bsn[j];
+                total += int.Parse(t.ToString()) * i; i--;
+            }
+            int rest = int.Parse(_bsn[8].ToString());
+            if ((total % 11) == rest)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
