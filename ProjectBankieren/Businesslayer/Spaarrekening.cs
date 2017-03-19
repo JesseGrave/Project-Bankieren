@@ -9,6 +9,8 @@ namespace Businesslayer
     public class Spaarrekening : Rekening
     {
         // PROPERTIES
+        private string rekeningnr;
+        private decimal bankSaldo;
         private decimal Rentepercentage;
 
         public decimal HuidigeRenteBerekenen
@@ -19,6 +21,8 @@ namespace Businesslayer
         // CONSTRUCTOR
         public Spaarrekening(string _rekeningnr, decimal _banksaldo, decimal _rente) : base(_rekeningnr, _banksaldo)
         {
+            this.rekeningnr = _rekeningnr;
+            this.bankSaldo = _banksaldo;
             this.Rentepercentage = _rente;
         }
 
