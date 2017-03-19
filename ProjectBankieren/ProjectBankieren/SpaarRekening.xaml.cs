@@ -23,5 +23,14 @@ namespace ProjectBankieren
         {
             InitializeComponent();
         }
+
+        private void btnTerug_Click(object sender, RoutedEventArgs e)
+        {
+            // In persoons gegevens moet nog de huidige gebruiker
+
+            //Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
+            //objPersoonsgegevens.Show();
+            //this.Close();
+        }
     }
 }

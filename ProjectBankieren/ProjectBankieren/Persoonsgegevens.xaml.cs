@@ -34,22 +34,20 @@ namespace ProjectBankieren
             //lblSpaarRekeningSaldo
             //lblBetaalRekening
             //lblSpaarRekening
-
-
+        }
+        
+        private void btnBetaalRekening_Click(object sender, RoutedEventArgs e)
+        {
+            BetaalRekeningxaml objBetaalrekening = new BetaalRekeningxaml();
+            objBetaalrekening.Show();
+            this.Close();
         }
 
         private void btnSpaarrekening_Click(object sender, RoutedEventArgs e)
         {
-            //Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
-            //objPersoonsgegevens.Show();
-            //this.Close();
-        }
-
-        private void btnBetaalRekening_Click(object sender, RoutedEventArgs e)
-        {
-            //Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens();
-            //objPersoonsgegevens.Show();
-            //this.Close();
+            SpaarRekening objSpaarRekening = new SpaarRekening();
+            objSpaarRekening.Show();
+            this.Close();
         }
 
         private void btnUitloggen_Click(object sender, RoutedEventArgs e)

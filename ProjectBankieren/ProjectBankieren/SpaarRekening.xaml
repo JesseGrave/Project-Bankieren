@@ -7,6 +7,6 @@
         mc:Ignorable="d"
         Title="SpaarRekening" Height="300" Width="300">
     <Grid>
-        
+        <Button x:Name="btnTerug" Content="Terug naar persoonsgegevens" HorizontalAlignment="Left" Margin="111,241,0,0" VerticalAlignment="Top" Width="173" Click="btnTerug_Click"/>
     </Grid>
 </Window>

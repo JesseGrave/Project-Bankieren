@@ -43,8 +43,6 @@ namespace Businesslayer
                 rekeningnrBetalen: "NL30 RABO 0785 36 785",
                 BetaalSaldo: 250,
                 maxkrediet: 1000
-
-
                 ));
 
             Allebankrekeninghouders.Add(new Bankrekeninghouder
@@ -60,8 +58,6 @@ namespace Businesslayer
                 rekeningnrBetalen: "NL30 RABO 0168 45 965",
                 BetaalSaldo: 200,
                 maxkrediet: 1000
-
-
                 ));
 
             return Allebankrekeninghouders;
