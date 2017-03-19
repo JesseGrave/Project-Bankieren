@@ -26,6 +26,7 @@ namespace ProjectBankieren
         {
             InitializeComponent();
             this.bankrekeninghouder = _bankrekeninghouder;
+            lblHuidigSaldo.Content = bankrekeninghouder.spaarrekening.bankSaldo;
         }
 
         private void btnTerug_Click(object sender, RoutedEventArgs e)

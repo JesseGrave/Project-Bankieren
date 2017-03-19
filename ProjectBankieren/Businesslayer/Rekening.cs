@@ -10,9 +10,9 @@ namespace Businesslayer
     {
 
         //PROPERTIES
-        protected string rekeningNr;
+        public string rekeningNr;
 
-        protected decimal bankSaldo;
+        public decimal bankSaldo;
 
         public decimal Bijschrijven
         {

@@ -109,11 +109,10 @@ namespace Businesslayer
             if (_bsn.Length != 9)
             {
                 return false;
-            }
+            } 
 
             int i = 9;
             int total = 0;
-
             for (int j = 0; j < 8; j++)
             {
                 char t = _bsn[j];
