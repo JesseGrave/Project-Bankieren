@@ -38,14 +38,14 @@ namespace ProjectBankieren
         
         private void btnBetaalRekening_Click(object sender, RoutedEventArgs e)
         {
-            BetaalRekeningxaml objBetaalrekening = new BetaalRekeningxaml();
+            BetaalRekeningxaml objBetaalrekening = new BetaalRekeningxaml(this.bankrekeninghouder);
             objBetaalrekening.Show();
             this.Close();
         }
 
         private void btnSpaarrekening_Click(object sender, RoutedEventArgs e)
         {
-            SpaarRekening objSpaarRekening = new SpaarRekening();
+            SpaarRekening objSpaarRekening = new SpaarRekening(this.bankrekeninghouder);
             objSpaarRekening.Show();
             this.Close();
         }
