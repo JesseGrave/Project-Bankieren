@@ -10,6 +10,6 @@
         <Button x:Name="btnTerug" Content="Terug naar persoonsgegevens" HorizontalAlignment="Left" Margin="111,241,0,0" VerticalAlignment="Top" Width="173" Click="btnTerug_Click"/>
         <Label x:Name="lblSaldo" Content="Uw huidigsaldo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblHuidigSaldo" Content="" HorizontalAlignment="Left" Margin="106,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="lblRekeningNrs" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="lblRekeningNrs" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="150" Initialized="ComboBox" />
     </Grid>
 </Window>

@@ -37,5 +37,14 @@ namespace ProjectBankieren
             objPersoonsgegevens.Show();
             this.Close();
         }
+
+        private void ComboBox(object sender, EventArgs e)
+        {
+            List<string> data = new List<string>();
+            data.Add("Kies uit uw contacten:");
+            var combo = sender as ComboBox;
+            combo.ItemsSource = data;
+            combo.SelectedIndex = 0;
+        }
     }
 }

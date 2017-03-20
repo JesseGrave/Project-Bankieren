@@ -9,8 +9,8 @@
     <Grid>
         <Label x:Name="lblNaam" Content="" HorizontalAlignment="Left" Margin="142,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblBSN" Content="" HorizontalAlignment="Left" Margin="142,36,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnSpaarrekening" Content="Spaar rekening" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="85" Click="btnSpaarrekening_Click"/>
-        <Button x:Name="btnBetaalRekening" Content="Betaal rekening" HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top" Width="85" Click="btnBetaalRekening_Click"/>
+        <Button x:Name="btnSpaarrekening" Content="Spaar rekening" HorizontalAlignment="Left" Margin="10,241,0,0" VerticalAlignment="Top" Width="85" Click="btnSpaarrekening_Click"/>
+        <Button x:Name="btnBetaalRekening" Content="Betaal rekening" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="85" Click="btnBetaalRekening_Click"/>
         <Label x:Name="lblNaamGebruiker" Content="Uw naam:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblBSNGebruiker" Content="Uw BSN nummer:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblSpaarRekening" Content="Uw spaar rekening:" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top"/>
