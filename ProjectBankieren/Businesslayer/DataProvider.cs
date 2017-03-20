@@ -82,6 +82,8 @@ namespace Businesslayer
                     else
                     {
                         wachtwoord = false;
+                        gebruikersnaam = true;
+                        break;
                     }
                 }
                 else

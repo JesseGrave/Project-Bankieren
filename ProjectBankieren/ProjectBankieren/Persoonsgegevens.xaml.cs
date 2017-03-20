@@ -52,6 +52,8 @@ namespace ProjectBankieren
 
         private void btnUitloggen_Click(object sender, RoutedEventArgs e)
         {
+            bankrekeninghouder = null;
+
             MainWindow objInloggen = new MainWindow();
             objInloggen.Show();
             this.Close();
