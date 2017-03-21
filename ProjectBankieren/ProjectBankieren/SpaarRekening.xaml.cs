@@ -35,5 +35,11 @@ namespace ProjectBankieren
             objPersoonsgegevens.Show();
             this.Close();
         }
+
+        private void btnOverboeken_Click(object sender, RoutedEventArgs e)
+        {
+            string bedrag;
+            bedrag = tbBedrag.Text;
+        }
     }
 }

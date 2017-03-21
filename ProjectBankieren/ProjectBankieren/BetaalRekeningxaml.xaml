@@ -11,6 +11,8 @@
         <Label x:Name="lblSaldo" Content="Uw huidigsaldo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblHuidigSaldo" Content="" HorizontalAlignment="Left" Margin="106,10,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbRekeningNrs" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="150" Initialized="ComboBox" />
-        <Button x:Name="btnOverboeken" Content="Overboeken" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="75" Click="btnOverboeken_Click"/>
+        <Button x:Name="btnOverboeken" Content="Overboeken" HorizontalAlignment="Left" Margin="106,99,0,0" VerticalAlignment="Top" Width="75" Click="btnOverboeken_Click"/>
+        <Label x:Name="lblBedrag" Content="Bedrag overboeken:" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbBedrag" HorizontalAlignment="Left" Height="23" Margin="132,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
     </Grid>
 </Window>

@@ -64,10 +64,11 @@ namespace ProjectBankieren
                 if (voornaam == item.rekeninghouder.Voornaam)
                 {
                     contact = item;
+                    contact.betaalrekening.bankSaldo = Convert.ToDecimal(tbBedrag.Text);
                 }
                 else
                 {
-                    
+                    // exception
                 }
             }
 
