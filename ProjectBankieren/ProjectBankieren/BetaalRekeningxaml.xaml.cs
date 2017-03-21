@@ -42,6 +42,11 @@ namespace ProjectBankieren
         {
             List<string> data = new List<string>();
             data.Add("Kies uit uw contacten:");
+            foreach (var contact in DataProvider.Allebankrekeninghouders())
+            {
+                data.Add(contact.rekeninghouder.Voornaam);
+            }
+            
             var combo = sender as ComboBox;
             combo.ItemsSource = data;
             combo.SelectedIndex = 0;
