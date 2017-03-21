@@ -24,6 +24,7 @@ namespace ProjectBankieren
     public partial class BetaalRekeningxaml : Window
     {
         private Bankrekeninghouder bankrekeninghouder;
+
         public BetaalRekeningxaml(Bankrekeninghouder _bankrekeninghouder)
         {
             InitializeComponent();
@@ -46,10 +47,17 @@ namespace ProjectBankieren
             {
                 data.Add(contact.rekeninghouder.Voornaam);
             }
+            data.Add("Spaarrekening");
             
             var combo = sender as ComboBox;
             combo.ItemsSource = data;
             combo.SelectedIndex = 0;
+        }
+
+        private void btnOverboeken_Click(object sender, RoutedEventArgs e)
+        {
+            string contact;
+            contact = cbRekeningNrs.SelectedItem.ToString();
         }
     }
 }
