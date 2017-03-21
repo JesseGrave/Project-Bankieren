@@ -44,7 +44,7 @@ namespace Businesslayer
         public override string ToString()
         {
             return base.ToString() +
-                string.Format("RentePercentage: {0}\nHuidig Opgebouwede Rente: {1}", Rentepercentage, HuidigeRenteBerekenen);
+                string.Format("\nRentePercentage: {0}\nHuidig Opgebouwde Rente: {1}", Rentepercentage, HuidigeRenteBerekenen);
         }
     }
 }

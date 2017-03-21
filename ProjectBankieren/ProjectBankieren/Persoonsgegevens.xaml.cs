@@ -28,12 +28,10 @@ namespace ProjectBankieren
 
             this.bankrekeninghouder = _bankrekeninghouder;
 
-            lblNaam.Content = bankrekeninghouder.rekeninghouder.Voornaam + ' ' + bankrekeninghouder.rekeninghouder.Achternaam;
+            lblNaam.Content = bankrekeninghouder.VolledigeNaam();
             lblBSN.Content = bankrekeninghouder.rekeninghouder.BSN;
-            lblBetaalRekeningSaldoInput.Content = bankrekeninghouder.betaalrekening.bankSaldo;
-            lblSpaarRekeningSaldoInput.Content = bankrekeninghouder.spaarrekening.bankSaldo;
-            lblBetaalRekeningInput.Content = bankrekeninghouder.betaalrekening.rekeningNr;
-            lblSpaarRekeningInput.Content = bankrekeninghouder.spaarrekening.rekeningNr;
+            lblBetaalRekeningInput.Content = bankrekeninghouder.BankRekeningInzien();
+            lblSpaarRekeningInput.Content = bankrekeninghouder.SpaarRekeningInzien();
         }
         
         private void btnBetaalRekening_Click(object sender, RoutedEventArgs e)

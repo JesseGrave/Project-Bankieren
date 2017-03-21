@@ -27,6 +27,10 @@ namespace Businesslayer
             }
             
             //METHODES
+            public string VolledigeNaam()
+            {
+                return rekeninghouder.Voornaam + " " + rekeninghouder.Achternaam;
+            }
             public string Gebruikersnaam()
             {
                 return rekeninghouder.Gebruikersnaam;

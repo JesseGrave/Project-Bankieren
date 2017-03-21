@@ -29,7 +29,7 @@ namespace Businesslayer
         //METHODES
         public override string ToString()
         {
-            return string.Format("RekeningNr: {0} \n Banksaldo: {1}", this.rekeningNr, this.bankSaldo);
+            return string.Format("RekeningNr: {0} \nBanksaldo: {1}", this.rekeningNr, this.bankSaldo);
         }
     }
 }
