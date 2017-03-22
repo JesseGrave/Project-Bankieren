@@ -23,11 +23,11 @@ namespace Businesslayer
         {
             try
             {
-                bedrag -= bankSaldo;
-                if (base.bankSaldo <= maximaalKrediet)
+                bankSaldo = bankSaldo - bedrag;
+                if (base.bankSaldo < maximaalKrediet)
                 {
                     Bijschrijven = bedrag;
-                    throw new ArgumentException("Uw transactie is mislukt /n Reden: Overschreiding maximaal krediet.");
+                    throw new ArgumentException("Uw transactie is mislukt \n Reden: Overschreiding maximaal krediet.");
                 }
             }
             catch (Exception exception)

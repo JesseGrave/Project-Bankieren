@@ -56,31 +56,54 @@ namespace ProjectBankieren
 
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
+
+
+
+
+
+
+
+
+
+
+            
             string cbItem = cbRekeningNrs.SelectedItem.ToString();
             bool gevonden = false;
-            Bankrekeninghouder contact;
 
-            foreach (var item in DataProvider.Allebankrekeninghouders())
+            try
             {
-                if (cbItem == item.rekeninghouder.Voornaam)
+                Bankrekeninghouder contact;
+
+                foreach (var item in DataProvider.Allebankrekeninghouders())
                 {
-                    contact = item;
-                    gevonden = true;
-                    break;
-                } else if(cbItem == "Spaarrekening")
+                    if (cbItem == item.rekeninghouder.Voornaam)
+                    {
+                        contact = item;
+                        gevonden = true;
+                        bankrekeninghouder.betaalrekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
+                        contact.betaalrekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                        break;
+                    }
+                    else if (cbItem == "Spaarrekening")
+                    {
+                        bankrekeninghouder.spaarrekening.Bijschrijven = Convert.ToDecimal(tbBedrag);
+                    }
+                    else
+                    {
+                        gevonden = false;
+                    }
+                }
+
+                if (!gevonden)
                 {
-                    
-                } else
-                {
-                    gevonden = false;
+                    MessageBox.Show("Kies een contact");
                 }
             }
-
-            if (!gevonden)
+            catch(Exception ex)
             {
-                MessageBox.Show("Kies een contact");
+                MessageBox.Show(ex.Message);
             }
-
+            lblHuidigSaldo.Content = bankrekeninghouder.betaalrekening.bankSaldo;
         }
     }
 }

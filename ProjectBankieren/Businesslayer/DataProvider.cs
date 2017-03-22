@@ -25,7 +25,7 @@ namespace Businesslayer
                 rentepercentage: 1,
                 rekeningnrBetalen: "NL27 ABNA 0459 85 235",
                 BetaalSaldo: 100,
-                maxkrediet: 1500
+                maxkrediet: -1500
 
 
                 ));
@@ -42,7 +42,7 @@ namespace Businesslayer
                 rentepercentage: 1,
                 rekeningnrBetalen: "NL30 RABO 0785 36 785",
                 BetaalSaldo: 250,
-                maxkrediet: 1000
+                maxkrediet: -1000
                 ));
 
             Allebankrekeninghouders.Add(new Bankrekeninghouder
@@ -57,7 +57,7 @@ namespace Businesslayer
                 rentepercentage: 1,
                 rekeningnrBetalen: "NL30 RABO 0168 45 965",
                 BetaalSaldo: 200,
-                maxkrediet: 1000
+                maxkrediet: -1000
                 ));
 
             return Allebankrekeninghouders;
@@ -90,7 +90,6 @@ namespace Businesslayer
                 {
                     gebruikersnaam = false;
                 }
-
             }
 
             if (!gebruikersnaam)
