@@ -8,7 +8,6 @@ namespace Businesslayer
 {
     public abstract class Rekening
     {
-
         //PROPERTIES
         public string rekeningNr;
 

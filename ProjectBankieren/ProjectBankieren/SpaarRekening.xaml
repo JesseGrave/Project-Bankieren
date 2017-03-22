@@ -10,5 +10,8 @@
         <Label x:Name="lblSaldo" Content="Uw huidige spaar saldo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblHuidigSaldo" Content="" HorizontalAlignment="Left" Margin="151,10,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnTerug" Content="Terug naar persoonsgegevens" HorizontalAlignment="Left" Margin="111,241,0,0" VerticalAlignment="Top" Width="173" Click="btnTerug_Click"/>
+        <TextBox x:Name="tbBedrag" HorizontalAlignment="Left" Height="23" Margin="132,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lblBedrag" Content="Bedrag overboeken:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnOverboeken" Content="Overboeken" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="75" Click="btnOverboeken_Click"/>
     </Grid>
 </Window>
