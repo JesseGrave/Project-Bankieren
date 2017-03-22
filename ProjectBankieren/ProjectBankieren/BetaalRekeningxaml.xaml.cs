@@ -56,19 +56,29 @@ namespace ProjectBankieren
 
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
-            string voornaam = cbRekeningNrs.SelectedItem.ToString();
+            string cbItem = cbRekeningNrs.SelectedItem.ToString();
+            bool gevonden = false;
             Bankrekeninghouder contact;
 
             foreach (var item in DataProvider.Allebankrekeninghouders())
             {
-                if (voornaam == item.rekeninghouder.Voornaam)
+                if (cbItem == item.rekeninghouder.Voornaam)
                 {
                     contact = item;
-                }
-                else
+                    gevonden = true;
+                    break;
+                } else if(cbItem == "Spaarrekening")
                 {
                     
+                } else
+                {
+                    gevonden = false;
                 }
+            }
+
+            if (!gevonden)
+            {
+                MessageBox.Show("Kies een contact");
             }
 
         }
