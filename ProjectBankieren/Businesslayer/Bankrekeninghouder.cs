@@ -10,15 +10,29 @@ namespace Businesslayer
         {
 
             //PROPERTIES
-            public Persoon rekeninghouder;
+            private Persoon rekeninghouder;
 
-            public Betaalrekening betaalrekening;
+            public Persoon rekeningHouder
+            {
+                get { return rekeninghouder; }
+            }
 
-            public Spaarrekening spaarrekening;
+            private Betaalrekening betaalrekening;
 
+            public Betaalrekening betaalRekening
+            {
+                get { return betaalrekening; }
+            }
 
-            //CONSTRUCTOR
-            public Bankrekeninghouder(string voornaam, string achternaam, long bsn, string gebruikersnaam, string wachtwoord,
+            private Spaarrekening spaarrekening;
+
+            public Spaarrekening spaarRekening
+            {
+                get { return spaarrekening; }
+            }
+
+        //CONSTRUCTOR
+        public Bankrekeninghouder(string voornaam, string achternaam, long bsn, string gebruikersnaam, string wachtwoord,
                 string rekeningnrSparen, decimal spaarSaldo, decimal rentepercentage, string rekeningnrBetalen, decimal BetaalSaldo, decimal maxkrediet)
             {
                 rekeninghouder = new Persoon(gebruikersnaam, wachtwoord, voornaam, achternaam, bsn);

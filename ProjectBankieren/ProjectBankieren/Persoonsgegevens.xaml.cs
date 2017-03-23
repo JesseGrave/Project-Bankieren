@@ -29,7 +29,7 @@ namespace ProjectBankieren
             this.bankrekeninghouder = _bankrekeninghouder;
 
             lblNaam.Content = bankrekeninghouder.VolledigeNaam();
-            lblBSN.Content = bankrekeninghouder.rekeninghouder.BSN;
+            lblBSN.Content = bankrekeninghouder.rekeningHouder.BSN;
             lblBetaalRekeningInput.Content = bankrekeninghouder.BankRekeningInzien();
             lblSpaarRekeningInput.Content = bankrekeninghouder.SpaarRekeningInzien();
         }
@@ -47,6 +47,7 @@ namespace ProjectBankieren
             objSpaarRekening.Show();
             this.Close();
         }
+
 
         private void btnUitloggen_Click(object sender, RoutedEventArgs e)
         {

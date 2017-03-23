@@ -26,7 +26,7 @@ namespace ProjectBankieren
         {
             InitializeComponent();
             this.bankrekeninghouder = _bankrekeninghouder;
-            lblHuidigSaldo.Content = bankrekeninghouder.spaarrekening.bankSaldo;
+            lblHuidigSaldo.Content = bankrekeninghouder.spaarRekening.bankSaldo;
         }
 
         private void btnTerug_Click(object sender, RoutedEventArgs e)
@@ -38,8 +38,16 @@ namespace ProjectBankieren
 
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
-            string bedrag;
-            bedrag = tbBedrag.Text;
+            try
+            {
+                bankrekeninghouder.spaarRekening.AfSchrijven(Convert.ToDecimal(tbBedrag.Text));
+                bankrekeninghouder.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.bankSaldo;
         }
     }
 }

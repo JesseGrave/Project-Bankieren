@@ -29,7 +29,7 @@ namespace ProjectBankieren
         {
             InitializeComponent();
             this.bankrekeninghouder = _bankrekeninghouder;
-            lblHuidigSaldo.Content = bankrekeninghouder.betaalrekening.bankSaldo;
+            lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.bankSaldo;
         }
 
         private void btnTerug_Click(object sender, RoutedEventArgs e)
@@ -45,7 +45,7 @@ namespace ProjectBankieren
             data.Add("Kies uit uw contacten:");
             foreach (var contact in DataProvider.Allebankrekeninghouders())
             {
-                data.Add(contact.rekeninghouder.Voornaam);
+                data.Add(contact.rekeningHouder.Voornaam);
             }
             data.Add("Spaarrekening");
             
@@ -56,17 +56,6 @@ namespace ProjectBankieren
 
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
-
-
-
-
-
-
-
-
-
-
-            
             string cbItem = cbRekeningNrs.SelectedItem.ToString();
             bool gevonden = false;
 
@@ -76,17 +65,17 @@ namespace ProjectBankieren
 
                 foreach (var item in DataProvider.Allebankrekeninghouders())
                 {
-                    if (cbItem == item.rekeninghouder.Voornaam)
+                    if (cbItem == item.rekeningHouder.Voornaam)
                     {
                         contact = item;
                         gevonden = true;
-                        bankrekeninghouder.betaalrekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
-                        contact.betaalrekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                        bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
+                        contact.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
                         break;
                     }
                     else if (cbItem == "Spaarrekening")
                     {
-                        bankrekeninghouder.spaarrekening.Bijschrijven = Convert.ToDecimal(tbBedrag);
+                        bankrekeninghouder.spaarRekening.Bijschrijven = Convert.ToDecimal(tbBedrag);
                     }
                     else
                     {
@@ -103,7 +92,7 @@ namespace ProjectBankieren
             {
                 MessageBox.Show(ex.Message);
             }
-            lblHuidigSaldo.Content = bankrekeninghouder.betaalrekening.bankSaldo;
+            lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.bankSaldo;
         }
     }
 }

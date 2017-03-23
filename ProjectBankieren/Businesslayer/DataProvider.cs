@@ -26,8 +26,6 @@ namespace Businesslayer
                 rekeningnrBetalen: "NL27 ABNA 0459 85 235",
                 BetaalSaldo: 100,
                 maxkrediet: -1500
-
-
                 ));
 
             Allebankrekeninghouders.Add(new Bankrekeninghouder
