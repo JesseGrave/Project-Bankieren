@@ -76,6 +76,7 @@ namespace ProjectBankieren
                     {
                         bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
                         bankrekeninghouder.spaarRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                        break;
                     }
                     else
                     {

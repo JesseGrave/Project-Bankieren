@@ -29,10 +29,10 @@ namespace Businesslayer
             try
             {
                 bankSaldo -= bedrag;
-                if (base.bankSaldo <= 0)
+                if (base.bankSaldo < 0)
                 {
                     Bijschrijven = bedrag;
-                    throw new ArgumentException("Uw transactie is mislukt /n Reden: Uw banksaldo kan niet in het negatief komen te staan.");
+                    throw new ArgumentException("Uw transactie is mislukt \nReden: Uw banksaldo kan niet in het negatief komen te staan.");
                 }
             }
             catch (Exception exception)
