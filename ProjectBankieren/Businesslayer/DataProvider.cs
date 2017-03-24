@@ -8,6 +8,8 @@ namespace Businesslayer
 {
     public static class DataProvider
     {
+        public static List<Bankrekeninghouder> BankrekeningHouders;
+
         //CONSTRUCTOR
         public static List<Bankrekeninghouder> Allebankrekeninghouders()
         {
