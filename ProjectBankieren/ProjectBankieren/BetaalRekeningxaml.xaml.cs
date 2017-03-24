@@ -88,18 +88,22 @@ namespace ProjectBankieren
                         }
                         else
                         {
-                            contact = item;
-                            bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
-                            contact.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
                             throw new Exception("U kunt geen negatief getal overboeken.");
                         }
                     }
                     else if (cbItem == "Spaarrekening")
                     {
-                        bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
-                        bankrekeninghouder.spaarRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
-                        gevonden = true;
-                        break;
+                        if (Convert.ToDecimal(tbBedrag.Text) > 0)
+                        {
+                            bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
+                            bankrekeninghouder.spaarRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                            gevonden = true;
+                            break;
+                        }
+                        else
+                        {
+                            throw new Exception("U kunt geen negatief getal overboeken.");
+                        }
                     }
                     else
                     {
