@@ -45,7 +45,8 @@ namespace ProjectBankieren
             data.Add("Kies uit uw contacten:");
             foreach (var contact in DataProvider.Allebankrekeninghouders)
             {
-                data.Add(contact.rekeningHouder.Voornaam);
+                data.Add(contact.VolledigeNaam() + " (" + contact.betaalRekening.rekeningNr + ")");
+                // Niet de huidige gebruiker tonen
             }
             data.Add("Spaarrekening");
             
@@ -65,7 +66,7 @@ namespace ProjectBankieren
 
                 foreach (var item in DataProvider.Allebankrekeninghouders)
                 {
-                    if (cbItem == item.rekeningHouder.Voornaam)
+                    if (cbItem == item.VolledigeNaam() + " (" + item.betaalRekening.rekeningNr + ")")
                     {
                         contact = item;
                         bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));

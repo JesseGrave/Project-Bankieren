@@ -6,16 +6,25 @@
         xmlns:local="clr-namespace:ProjectBankieren"
         mc:Ignorable="d"
         Title="BetaalRekeningxaml" Height="300" Width="300">
-    <Grid>
+    <Grid Margin="0,0,-0.4,-8.6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button x:Name="btnTerug" Content="Terug naar persoonsgegevens" HorizontalAlignment="Left" Margin="111,241,0,0" VerticalAlignment="Top" Width="173" Click="btnTerug_Click"/>
         <Label x:Name="lblSaldo" Content="Uw huidigsaldo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblHuidigSaldo" Content="" HorizontalAlignment="Left" Margin="106,10,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cbRekeningNrs" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="197" Initialized="ComboBox" />
-        <Button x:Name="btnOverboeken" Content="Overboeken" HorizontalAlignment="Left" Margin="132,99,0,0" VerticalAlignment="Top" Width="75" Click="btnOverboeken_Click"/>
-        <Label x:Name="lblBedrag" Content="Bedrag overboeken:" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="tbBedrag" HorizontalAlignment="Left" Height="23" Margin="132,71,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+        <ComboBox x:Name="cbRekeningNrs" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="257" Initialized="ComboBox" RenderTransformOrigin="0.5,0.5" >
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.003"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
+        </ComboBox>
+        <Button x:Name="btnOverboeken" Content="Overboeken" HorizontalAlignment="Left" Margin="188,96,0,0" VerticalAlignment="Top" Width="77" Click="btnOverboeken_Click"/>
+        <Label x:Name="lblBedrag" Content="Uw gewenste overboek bedrag:" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="173"/>
+        <TextBox x:Name="tbBedrag" HorizontalAlignment="Left" Height="23" Margin="188,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
     </Grid>
 </Window>
