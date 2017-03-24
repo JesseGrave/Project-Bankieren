@@ -57,7 +57,7 @@ namespace ProjectBankieren
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
             string cbItem = cbRekeningNrs.SelectedItem.ToString();
-            bool gevonden = true;
+            bool gevonden = false;
 
             try
             {
@@ -70,12 +70,14 @@ namespace ProjectBankieren
                         contact = item;
                         bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
                         contact.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                        gevonden = true;
                         break;
                     }
                     else if (cbItem == "Spaarrekening")
                     {
                         bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
                         bankrekeninghouder.spaarRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                        gevonden = true;
                         break;
                     }
                     else
