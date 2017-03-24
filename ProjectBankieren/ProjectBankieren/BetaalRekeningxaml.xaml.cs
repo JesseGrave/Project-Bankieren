@@ -43,7 +43,7 @@ namespace ProjectBankieren
         {
             List<string> data = new List<string>();
             data.Add("Kies uit uw contacten:");
-            foreach (var contact in DataProvider.Allebankrekeninghouders())
+            foreach (var contact in DataProvider.Allebankrekeninghouders)
             {
                 data.Add(contact.rekeningHouder.Voornaam);
             }
@@ -57,25 +57,25 @@ namespace ProjectBankieren
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
             string cbItem = cbRekeningNrs.SelectedItem.ToString();
-            bool gevonden = false;
+            bool gevonden = true;
 
             try
             {
                 Bankrekeninghouder contact;
 
-                foreach (var item in DataProvider.Allebankrekeninghouders())
+                foreach (var item in DataProvider.Allebankrekeninghouders)
                 {
                     if (cbItem == item.rekeningHouder.Voornaam)
                     {
                         contact = item;
-                        gevonden = true;
                         bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
                         contact.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
                         break;
                     }
                     else if (cbItem == "Spaarrekening")
                     {
-                        bankrekeninghouder.spaarRekening.Bijschrijven = Convert.ToDecimal(tbBedrag);
+                        bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
+                        bankrekeninghouder.spaarRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
                     }
                     else
                     {

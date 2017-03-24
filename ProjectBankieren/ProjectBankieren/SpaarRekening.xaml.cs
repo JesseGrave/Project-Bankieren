@@ -47,7 +47,8 @@ namespace ProjectBankieren
             {
                 MessageBox.Show(ex.Message);
             }
-            lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.bankSaldo;
+
+            lblHuidigSaldo.Content = bankrekeninghouder.spaarRekening.bankSaldo;
         }
     }
 }

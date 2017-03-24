@@ -32,7 +32,7 @@ namespace Businesslayer
             }
 
         //CONSTRUCTOR
-        public Bankrekeninghouder(string voornaam, string achternaam, long bsn, string gebruikersnaam, string wachtwoord,
+        public Bankrekeninghouder(string voornaam, string achternaam, string bsn, string gebruikersnaam, string wachtwoord,
                 string rekeningnrSparen, decimal spaarSaldo, decimal rentepercentage, string rekeningnrBetalen, decimal BetaalSaldo, decimal maxkrediet)
             {
                 rekeninghouder = new Persoon(gebruikersnaam, wachtwoord, voornaam, achternaam, bsn);

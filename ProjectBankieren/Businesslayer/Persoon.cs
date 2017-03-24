@@ -41,9 +41,9 @@ namespace Businesslayer
             set { achternaam = value; }
         }
 
-        private long bsn;
+        private string bsn;
 
-        public long BSN
+        public string BSN
         {
             get { return bsn; }
             set { bsn = value; }
@@ -51,13 +51,20 @@ namespace Businesslayer
 
         // CONSTRUCTOR
 
-        public Persoon(string _gebruikersnaam, string _wachtwoord, string _voornaam, string _achternaam, long _bsn)
+        public Persoon(string _gebruikersnaam, string _wachtwoord, string _voornaam, string _achternaam, string _bsn)
         {
-            this.gebruikersnaam = _gebruikersnaam;
-            this.wachtwoord = _wachtwoord;
-            this.voornaam = _voornaam;
-            this.achternaam = _achternaam;
-            this.bsn = _bsn;
+            if (DataProvider.ElfProef(_bsn))
+            {
+                this.gebruikersnaam = _gebruikersnaam;
+                this.wachtwoord = _wachtwoord;
+                this.voornaam = _voornaam;
+                this.achternaam = _achternaam;
+                this.bsn = _bsn;
+            }
+            else
+            {
+                throw new ArgumentException("Elfproef is gefaald");
+            }
         }
 
         // METHODES
