@@ -41,6 +41,8 @@ namespace Businesslayer
             }
             
             //METHODES
+
+            //Voor het makkelijker ophalen van informatie van de rekeninghouder
             public string VolledigeNaam()
             {
                 return rekeninghouder.Voornaam + " " + rekeninghouder.Achternaam;

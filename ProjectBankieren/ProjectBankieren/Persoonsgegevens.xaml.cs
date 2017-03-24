@@ -22,6 +22,8 @@ namespace ProjectBankieren
     public partial class Persoonsgegevens : Window
     {
         private Bankrekeninghouder bankrekeninghouder;
+
+        //CONSTRUCTOR
         public Persoonsgegevens(Bankrekeninghouder _bankrekeninghouder)
         {
             InitializeComponent();
@@ -34,6 +36,9 @@ namespace ProjectBankieren
             lblSpaarRekeningInput.Content = bankrekeninghouder.SpaarRekeningInzien();
         }
         
+        /// <summary>
+        /// Voor het door sturen naar de betaalrekening window
+        /// </summary>
         private void btnBetaalRekening_Click(object sender, RoutedEventArgs e)
         {
             BetaalRekeningxaml objBetaalrekening = new BetaalRekeningxaml(this.bankrekeninghouder);
@@ -41,6 +46,9 @@ namespace ProjectBankieren
             this.Hide();
         }
 
+        /// <summary>
+        /// Voor het door sturen naar de spaarrekening window
+        /// </summary>
         private void btnSpaarrekening_Click(object sender, RoutedEventArgs e)
         {
             SpaarRekening objSpaarRekening = new SpaarRekening(this.bankrekeninghouder);
@@ -48,7 +56,9 @@ namespace ProjectBankieren
             this.Hide();
         }
 
-
+        /// <summary>
+        /// Voor het uitloggen
+        /// </summary>
         private void btnUitloggen_Click(object sender, RoutedEventArgs e)
         {
             bankrekeninghouder = null;

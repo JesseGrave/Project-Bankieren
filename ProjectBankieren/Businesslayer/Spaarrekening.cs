@@ -24,7 +24,12 @@ namespace Businesslayer
         }
 
         // METHODES
-        public void AfSchrijven(decimal bedrag)
+
+        /// <summary>
+        /// Voor het afschrijven van geld
+        /// </summary>
+        /// <param name="bedrag">Het af te schrijven bedrag</param>
+        public void Afschrijven(decimal bedrag)
         {
             try
             {

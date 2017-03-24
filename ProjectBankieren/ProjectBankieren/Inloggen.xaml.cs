@@ -28,6 +28,9 @@ namespace ProjectBankieren
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Voor het controleren van de gegevens en dan door te sturen naar de persoonsgegevens window
+        /// </summary>
         private void btnInloggen_Click(object sender, RoutedEventArgs e)
         {
             if (rbGebruiker.IsChecked == true)

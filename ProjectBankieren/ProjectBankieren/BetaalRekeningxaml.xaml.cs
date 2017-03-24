@@ -25,6 +25,7 @@ namespace ProjectBankieren
     {
         private Bankrekeninghouder bankrekeninghouder;
 
+        //CONSTRUCTOR
         public BetaalRekeningxaml(Bankrekeninghouder _bankrekeninghouder)
         {
             InitializeComponent();
@@ -32,6 +33,9 @@ namespace ProjectBankieren
             lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.bankSaldo;
         }
 
+        /// <summary>
+        /// Voor het terug navigeren naar de persoonsgegevens window
+        /// </summary>
         private void btnTerug_Click(object sender, RoutedEventArgs e)
         {
             Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens(this.bankrekeninghouder);
@@ -39,6 +43,9 @@ namespace ProjectBankieren
             this.Close();
         }
 
+        /// <summary>
+        /// Voor het vullen van de combobox
+        /// </summary>
         private void ComboBox(object sender, EventArgs e)
         {
             List<string> data = new List<string>();
@@ -55,6 +62,9 @@ namespace ProjectBankieren
             combo.SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// Voor het overboeken van het ingevulde bedrag
+        /// </summary>
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
             string cbItem = cbRekeningNrs.SelectedItem.ToString();

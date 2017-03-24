@@ -11,6 +11,10 @@ namespace Businesslayer
         public static List<Bankrekeninghouder> Allebankrekeninghouders;
 
         //CONSTRUCTOR
+
+        /// <summary>
+        /// Voor het vullen van de lijst met alle bankrekeninghouders
+        /// </summary>
         public static void VulLijst()
         {
             if (Allebankrekeninghouders == null)
@@ -74,6 +78,13 @@ namespace Businesslayer
 
 
         //METHODES
+
+        /// <summary>
+        /// Voor het inloggen van een gebruiker
+        /// </summary>
+        /// <param name="_gebruikersnaam">De gebruikersnaam</param>
+        /// <param name="_wachtwoord">Het wachtwoord</param>
+        /// <returns></returns>
         public static Bankrekeninghouder Inloggen(string _gebruikersnaam, string _wachtwoord)
         {
             VulLijst();
@@ -115,6 +126,11 @@ namespace Businesslayer
             return null;
         }
 
+        /// <summary>
+        /// De elfproef voor het controleren of het een geldig bsn nummer is
+        /// </summary>
+        /// <param name="_bsn">Het bsn nummer</param>
+        /// <returns></returns>
         public static bool ElfProef(string _bsn)
         {
             if (_bsn.Length != 9)

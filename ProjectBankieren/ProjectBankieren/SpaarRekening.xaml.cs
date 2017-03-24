@@ -22,6 +22,8 @@ namespace ProjectBankieren
     public partial class SpaarRekening : Window
     {
         private Bankrekeninghouder bankrekeninghouder;
+
+        //CONSTRUCTOR
         public SpaarRekening(Bankrekeninghouder _bankrekeninghouder)
         {
             InitializeComponent();
@@ -29,6 +31,9 @@ namespace ProjectBankieren
             lblHuidigSaldo.Content = bankrekeninghouder.spaarRekening.bankSaldo;
         }
 
+        /// <summary>
+        /// Voor het terug navigeren naar de persoonsgegevens window
+        /// </summary>
         private void btnTerug_Click(object sender, RoutedEventArgs e)
         {
             Persoonsgegevens objPersoonsgegevens = new Persoonsgegevens(this.bankrekeninghouder);
@@ -36,11 +41,14 @@ namespace ProjectBankieren
             this.Close();
         }
 
+        /// <summary>
+        /// Voor het overboeken naar de betaalrekening
+        /// </summary>
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                bankrekeninghouder.spaarRekening.AfSchrijven(Convert.ToDecimal(tbBedrag.Text));
+                bankrekeninghouder.spaarRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
                 bankrekeninghouder.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
             }
             catch (Exception ex)

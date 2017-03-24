@@ -19,6 +19,11 @@ namespace Businesslayer
         }
 
         // METHODES
+
+        /// <summary>
+        /// Voor het afschrijven van geld
+        /// </summary>
+        /// <param name="bedrag">Het af te schrijven bedrag</param>
         public void Afschrijven(decimal bedrag)
         {
             try
@@ -27,7 +32,7 @@ namespace Businesslayer
                 if (base.bankSaldo < maximaalKrediet)
                 {
                     Bijschrijven = bedrag;
-                    throw new ArgumentException("Uw transactie is mislukt \n Reden: Overschreiding maximaal krediet.");
+                    throw new ArgumentException("Uw transactie is mislukt \nReden: Overschreiding maximaal krediet.");
                 }
             }
             catch (Exception exception)
