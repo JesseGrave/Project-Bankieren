@@ -14,7 +14,7 @@ namespace Businesslayer
         public decimal bankSaldo;
 
         public decimal Bijschrijven
-        {
+        { 
             set { bankSaldo += value; }
         }
 

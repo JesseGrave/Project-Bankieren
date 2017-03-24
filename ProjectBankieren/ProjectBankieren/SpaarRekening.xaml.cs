@@ -48,8 +48,17 @@ namespace ProjectBankieren
         {
             try
             {
-                bankrekeninghouder.spaarRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
-                bankrekeninghouder.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                if(Convert.ToDecimal(tbBedrag.Text) > 0)
+                {
+                    bankrekeninghouder.spaarRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
+                    bankrekeninghouder.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                }
+                else
+                {
+                    bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
+                    bankrekeninghouder.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                    throw new Exception("U kunt geen negatief getal overboeken.");
+                }
             }
             catch (Exception ex)
             {

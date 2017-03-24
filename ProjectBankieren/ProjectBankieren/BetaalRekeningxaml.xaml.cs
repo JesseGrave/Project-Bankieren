@@ -78,11 +78,21 @@ namespace ProjectBankieren
                 {
                     if (cbItem == item.VolledigeNaam() + " (" + item.betaalRekening.rekeningNr + ")")
                     {
-                        contact = item;
-                        bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
-                        contact.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
-                        gevonden = true;
-                        break;
+                        if(Convert.ToDecimal(tbBedrag.Text) > 0)
+                        {
+                            contact = item;
+                            bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
+                            contact.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                            gevonden = true;
+                            break;
+                        }
+                        else
+                        {
+                            contact = item;
+                            bankrekeninghouder.betaalRekening.Afschrijven(Convert.ToDecimal(tbBedrag.Text));
+                            contact.betaalRekening.Bijschrijven = Convert.ToDecimal(tbBedrag.Text);
+                            throw new Exception("U kunt geen negatief getal overboeken.");
+                        }
                     }
                     else if (cbItem == "Spaarrekening")
                     {
