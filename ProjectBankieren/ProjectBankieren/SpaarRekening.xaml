@@ -1,0 +1,21 @@
+﻿<Window x:Class="ProjectBankieren.SpaarRekening"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectBankieren"
+        mc:Ignorable="d"
+        Title="SpaarRekening" Height="300" Width="300">
+    <Grid Margin="0,0,-0.4,0.4" Height="270" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblSaldo" Content="Uw huidige spaar saldo:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="26" Width="136"/>
+        <Label x:Name="lblHuidigSaldo" Content="" HorizontalAlignment="Left" Margin="146,10,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnTerug" Content="Terug naar persoonsgegevens" HorizontalAlignment="Left" Margin="111,241,0,0" VerticalAlignment="Top" Width="173" Click="btnTerug_Click" Height="19"/>
+        <TextBox x:Name="tbBedrag" HorizontalAlignment="Left" Height="23" Margin="132,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="50"/>
+        <Label x:Name="lblBedrag" Content="Bedrag overboeken:" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Height="26" Width="117"/>
+        <Button x:Name="btnOverboeken" Content="Overboeken" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" Width="75" Click="btnOverboeken_Click" Height="19"/>
+    </Grid>
+</Window>

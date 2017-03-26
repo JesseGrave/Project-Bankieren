@@ -55,7 +55,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="SpaarRekening.xaml.cs">
+      <DependentUpon>SpaarRekening.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BetaalRekeningxaml.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Inloggen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,12 +70,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="BetaalRekeningxaml.xaml.cs">
+      <DependentUpon>BetaalRekeningxaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Inloggen.xaml.cs">
+      <DependentUpon>Inloggen.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Persoonsgegevens.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SpaarRekening.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Persoonsgegevens.xaml.cs">
+      <DependentUpon>Persoonsgegevens.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -94,6 +115,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Businesslayer\Businesslayer.csproj">
+      <Project>{188b5d00-d3c6-4b8f-89cf-414e5b0b216f}</Project>
+      <Name>Businesslayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
