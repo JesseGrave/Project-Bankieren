@@ -155,5 +155,24 @@ namespace Businesslayer
                 return false;
             }
         }
+
+        public static Bankrekeninghouder RekeningnrGebruiker(string _rekeningnr)
+         {
+             VulLijst();
+             var list = Allebankrekeninghouders;
+ 
+             foreach (var item in list)
+             {
+                 if (_rekeningnr == item.betaalRekening.rekeningNr)
+                 {
+                     return item;
+                 }
+ 
+             }
+             throw new ArgumentException("Het bankrekeningnummer bestaat niet");
+ 
+ 
+ 
+         }
     }
 }

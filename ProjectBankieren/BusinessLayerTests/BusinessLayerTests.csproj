@@ -55,6 +55,7 @@
     <Compile Include="RekeningTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataProviderTests.cs" />
+    <Compile Include="BankrekeningTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Businesslayer\Businesslayer.csproj">
