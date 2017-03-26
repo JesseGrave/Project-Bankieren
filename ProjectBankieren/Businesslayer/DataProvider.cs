@@ -30,10 +30,10 @@ namespace Businesslayer
                         bsn: "924613440",
                         gebruikersnaam: "mdeLange",
                         wachtwoord: "MennoBank",
-                        rekeningnrSparen: "NL14 ABNA 0659 56 894",
+                        rekeningnrSparen: "NL14 ABNA 0659 5689 64",
                         spaarSaldo: 1000,
                         rentepercentage: 1,
-                        rekeningnrBetalen: "NL27 ABNA 0459 85 235",
+                        rekeningnrBetalen: "NL27 ABNA 0459 8523 85",
                         BetaalSaldo: 100,
                         maxkrediet: -1500
                         ));
@@ -45,10 +45,10 @@ namespace Businesslayer
                         bsn: "552499183",
                         gebruikersnaam: "jgrave",
                         wachtwoord: "jessebank",
-                        rekeningnrSparen: "NL10 RABO 0397 53 459",
+                        rekeningnrSparen: "NL10 RABO 0397 5345 79",
                         spaarSaldo: 1000,
                         rentepercentage: 1,
-                        rekeningnrBetalen: "NL30 RABO 0785 36 785",
+                        rekeningnrBetalen: "NL30 RABO 0785 3678 25",
                         BetaalSaldo: 250,
                         maxkrediet: -1000
                         ));
@@ -60,10 +60,10 @@ namespace Businesslayer
                         bsn: "294567471",
                         gebruikersnaam: "pappel",
                         wachtwoord: "peterbank",
-                        rekeningnrSparen: "NL10 RABO 0596 53 764",
+                        rekeningnrSparen: "NL16 RABO 0596 5376 84",
                         spaarSaldo: 10000,
                         rentepercentage: 1,
-                        rekeningnrBetalen: "NL30 RABO 0168 45 965",
+                        rekeningnrBetalen: "NL90 RABO 0168 4596 25",
                         BetaalSaldo: 200,
                         maxkrediet: -1000
                         ));
