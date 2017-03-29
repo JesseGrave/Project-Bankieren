@@ -88,7 +88,7 @@ namespace Businesslayer
         public static Bankrekeninghouder Inloggen(string _gebruikersnaam, string _wachtwoord)
         {
             VulLijst();
-            var list = Allebankrekeninghouders;
+            List<Bankrekeninghouder> list = Allebankrekeninghouders;
 
             foreach (var item in list)
             {
@@ -133,18 +133,16 @@ namespace Businesslayer
         public static Bankrekeninghouder RekeningnrGebruiker(string _rekeningnr)
          {
              VulLijst();
-             var list = Allebankrekeninghouders;
+             List<Bankrekeninghouder> list = Allebankrekeninghouders;
  
-             foreach (var item in list)
+             foreach (Bankrekeninghouder item in list)
              {
                  if (_rekeningnr == item.betaalRekening.RekeningNr)
                  {
                      return item;
                  }
- 
              }
              throw new ArgumentException("Het bankrekeningnummer bestaat niet");
-
          }
     }
 }
