@@ -30,7 +30,7 @@ namespace ProjectBankieren
         {
             InitializeComponent();
             this.bankrekeninghouder = _bankrekeninghouder;
-            lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.bankSaldo;
+            lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.BankSaldo;
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace ProjectBankieren
             data.Add("Kies uit uw contacten:");
             foreach (var contact in DataProvider.Allebankrekeninghouders)
             {
-                data.Add(contact.VolledigeNaam() + " (" + contact.betaalRekening.rekeningNr + ")");
+                data.Add(contact.VolledigeNaam() + " (" + contact.betaalRekening.RekeningNr + ")");
                 // Niet de huidige gebruiker tonen
             }
             data.Add("Spaarrekening");
@@ -76,12 +76,12 @@ namespace ProjectBankieren
 
                 foreach (var item in DataProvider.Allebankrekeninghouders)
                 {
-                    if (cbItem == item.VolledigeNaam() + " (" + item.betaalRekening.rekeningNr + ")")
+                    if (cbItem == item.VolledigeNaam() + " (" + item.betaalRekening.RekeningNr + ")")
                     {
                         if(Convert.ToDecimal(tbBedrag.Text) > 0)
                         {
                             contact = item;
-                            bankrekeninghouder.Betalen(contact.betaalRekening.rekeningNr, Convert.ToDecimal(tbBedrag.Text));
+                            bankrekeninghouder.Betalen(contact.betaalRekening.RekeningNr, Convert.ToDecimal(tbBedrag.Text));
                             gevonden = true;
                             break;
                         }
@@ -118,7 +118,7 @@ namespace ProjectBankieren
             {
                 MessageBox.Show(ex.Message);
             }
-            lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.bankSaldo;
+            lblHuidigSaldo.Content = bankrekeninghouder.betaalRekening.BankSaldo;
         }
     }
 }

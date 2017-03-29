@@ -28,7 +28,7 @@ namespace ProjectBankieren
         {
             InitializeComponent();
             this.bankrekeninghouder = _bankrekeninghouder;
-            lblHuidigSaldo.Content = bankrekeninghouder.spaarRekening.bankSaldo;
+            lblHuidigSaldo.Content = bankrekeninghouder.spaarRekening.BankSaldo;
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace ProjectBankieren
                 MessageBox.Show(ex.Message);
             }
 
-            lblHuidigSaldo.Content = bankrekeninghouder.spaarRekening.bankSaldo;
+            lblHuidigSaldo.Content = bankrekeninghouder.spaarRekening.BankSaldo;
         }
     }
 }
