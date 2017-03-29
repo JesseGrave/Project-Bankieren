@@ -28,8 +28,8 @@ namespace Businesslayer
         {
             try
             {
-                bankSaldo = bankSaldo - bedrag;
-                if (base.bankSaldo < maximaalKrediet)
+                BankSaldo = BankSaldo - bedrag;
+                if (base.BankSaldo < maximaalKrediet)
                 {
                     Bijschrijven = bedrag;
                     throw new ArgumentException("Uw transactie is mislukt \nReden: Overschreiding maximaal krediet.");

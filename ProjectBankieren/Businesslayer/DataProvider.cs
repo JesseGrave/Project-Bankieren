@@ -89,41 +89,15 @@ namespace Businesslayer
         {
             VulLijst();
             var list = Allebankrekeninghouders;
-            bool gebruikersnaam = true;
-            bool wachtwoord = true;
 
             foreach (var item in list)
             {
-                if (_gebruikersnaam == item.Gebruikersnaam())
+                if (_gebruikersnaam == item.Gebruikersnaam() && _wachtwoord == item.Wachtwoord())
                 {
-                    if (_wachtwoord == item.Wachtwoord())
-                    {
-                        return item;
-                    }
-                    else
-                    {
-                        wachtwoord = false;
-                        gebruikersnaam = true;
-                        break;
-                    }
-                }
-                else
-                {
-                    gebruikersnaam = false;
+                    return item;
                 }
             }
-
-            if (!gebruikersnaam)
-            {
-                throw new ArgumentException("Uw gebruikersnaam is onjuist");
-            }
-
-            if (!wachtwoord)
-            {
-                throw new ArgumentException("Uw wachtwoord is onjuist");
-            }
-
-            return null;
+            throw new UnauthorizedAccessException("Uw gebruikersnaam of wachtwoord is onjuist");
         }
 
         /// <summary>
@@ -163,16 +137,14 @@ namespace Businesslayer
  
              foreach (var item in list)
              {
-                 if (_rekeningnr == item.betaalRekening.rekeningNr)
+                 if (_rekeningnr == item.betaalRekening.RekeningNr)
                  {
                      return item;
                  }
  
              }
              throw new ArgumentException("Het bankrekeningnummer bestaat niet");
- 
- 
- 
+
          }
     }
 }

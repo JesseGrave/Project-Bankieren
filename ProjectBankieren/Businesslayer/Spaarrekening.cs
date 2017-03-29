@@ -14,7 +14,7 @@ namespace Businesslayer
 
         public decimal HuidigeRenteBerekenen
         {
-            get { return (bankSaldo * (Rentepercentage / 100)); }
+            get { return (BankSaldo * (Rentepercentage / 100)); }
         }
         
         // CONSTRUCTOR
@@ -33,8 +33,8 @@ namespace Businesslayer
         {
             try
             {
-                bankSaldo -= bedrag;
-                if (base.bankSaldo < 0)
+                BankSaldo -= bedrag;
+                if (base.BankSaldo < 0)
                 {
                     Bijschrijven = bedrag;
                     throw new ArgumentException("Uw transactie is mislukt \nReden: Uw banksaldo kan niet in het negatief komen te staan.");

@@ -9,9 +9,21 @@ namespace Businesslayer
     public abstract class Rekening
     {
         //PROPERTIES
-        public string rekeningNr;
+        private string rekeningNr;
 
-        public decimal bankSaldo;
+        public string RekeningNr
+        {
+            get { return rekeningNr; }
+        }
+
+        private decimal bankSaldo;
+
+        public decimal BankSaldo
+        {
+            get { return bankSaldo; }
+            set { bankSaldo = value; }
+        }
+
 
         public decimal Bijschrijven
         { 
