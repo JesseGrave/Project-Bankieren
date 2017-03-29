@@ -63,7 +63,7 @@ namespace Businesslayer
             }
             else
             {
-                throw new ArgumentException("Elfproef is gefaald");
+                throw new ArgumentException("Uw BSN nummer is ongeldig");
             }
         }
 

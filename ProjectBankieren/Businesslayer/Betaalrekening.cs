@@ -28,6 +28,11 @@ namespace Businesslayer
         {
             try
             {
+                if (bedrag < 0)
+                {
+                    throw new ArgumentException("Uw transactie is mislukt \nReden: U kunt geen negatief bedrag overmaken.");
+                }
+
                 BankSaldo = BankSaldo - bedrag;
                 if (base.BankSaldo < maximaalKrediet)
                 {

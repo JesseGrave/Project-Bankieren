@@ -53,7 +53,6 @@ namespace ProjectBankieren
             foreach (var contact in DataProvider.Allebankrekeninghouders)
             {
                 data.Add(contact.VolledigeNaam() + " (" + contact.betaalRekening.RekeningNr + ")");
-                // Niet de huidige gebruiker tonen
             }
             data.Add("Spaarrekening");
             
@@ -68,7 +67,6 @@ namespace ProjectBankieren
         private void btnOverboeken_Click(object sender, RoutedEventArgs e)
         {
             string cbItem = cbRekeningNrs.SelectedItem.ToString();
-            bool gevonden = false;
 
             try
             {
@@ -78,40 +76,15 @@ namespace ProjectBankieren
                 {
                     if (cbItem == item.VolledigeNaam() + " (" + item.betaalRekening.RekeningNr + ")")
                     {
-                        if(Convert.ToDecimal(tbBedrag.Text) > 0)
-                        {
-                            contact = item;
-                            bankrekeninghouder.Betalen(contact.betaalRekening.RekeningNr, Convert.ToDecimal(tbBedrag.Text));
-                            gevonden = true;
-                            break;
-                        }
-                        else
-                        {
-                            throw new Exception("U kunt geen negatief getal overboeken.");
-                        }
+                        contact = item;
+                        bankrekeninghouder.Betalen(contact.betaalRekening.RekeningNr, Convert.ToDecimal(tbBedrag.Text));
+                        break;
                     }
                     else if (cbItem == "Spaarrekening")
                     {
-                        if (Convert.ToDecimal(tbBedrag.Text) > 0)
-                        {
-                            bankrekeninghouder.NaarSpaarRekening(Convert.ToDecimal(tbBedrag.Text));
-                            gevonden = true;
-                            break;
-                        }
-                        else
-                        {
-                            throw new Exception("U kunt geen negatief getal overboeken.");
-                        }
+                        bankrekeninghouder.NaarSpaarRekening(Convert.ToDecimal(tbBedrag.Text));
+                        break;
                     }
-                    else
-                    {
-                        gevonden = false;
-                    }
-                }
-
-                if (!gevonden)
-                {
-                    MessageBox.Show("Kies een contact");
                 }
             }
             catch(Exception ex)
