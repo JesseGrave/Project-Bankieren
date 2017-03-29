@@ -53,13 +53,8 @@ namespace ProjectBankieren
             foreach (var contact in DataProvider.Allebankrekeninghouders)
             {
                 data.Add(contact.VolledigeNaam() + " (" + contact.betaalRekening.rekeningNr + ")");
-                // Niet de huidige gebruiker tonen
             }
             data.Add("Spaarrekening");
-            
-            var combo = sender as ComboBox;
-            combo.ItemsSource = data;
-            combo.SelectedIndex = 0;
         }
 
         /// <summary>
